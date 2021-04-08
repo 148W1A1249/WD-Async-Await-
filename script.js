@@ -9,7 +9,10 @@ async function foo(){
         let code = restData[0];
         let fixerResp = await fetch(fixerUri[0]+code+fixerUri[1]);
         let fixerData = await fixerResp.json();
-        console.log(fixerData.data[0].images.original.url);
+        let fixerLink = fixerData.data[0].images.original.url;
+        console.log(fixerLink);
+        // var link = document.querySelector('#link');
+        // link.setAttribute('href',fixerLink);
 
     }catch(error){
         console.log(error);
